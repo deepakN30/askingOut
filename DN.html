@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fde9eb; /* Soft Peach Background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('seen1.jpg'); /* Background Pattern Image */
+  background-size: cover;
+}
+
+.container {
+  background-color: #fff8f9; /* Creamy White Container */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  color: #d81b60; /* Deep Rose Text */
+  font-family: 'Parisienne', cursive;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: #880e4f; /* Darker Rose Text */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: #333333; /* Dark Text */
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+label {
+  display: block;
+  color: #d81b60; /* Deep Rose Text for Labels */
+  margin-bottom: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #d81b60; /* Border color in Deep Rose */
+  border-radius: 8px;
+}
+
+button {
+  background-color: #d81b60; /* Deep Rose Button */
+  color: #ffffff;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #880e4f; /* Darker Rose Button on Hover */
+}
+
+#confirmationMessage {
+  margin-top: 30px;
+  color: #4caf50;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Romantic Date Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="title">An Invitation to Love</h1>
+    <p class="subtitle">Dear Neha,</p>
+    <p class="message">In the dance of life, I find my rhythm in the echoes of your laughter. Would you grace me with your presence for a magical evening?</p>
+
+    <form id="dateForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="response">Your Response:</label>
+      <select id="response" name="response" required>
+        <option value="">Select one...</option>
+        <option value="Yes">Yes, I'd love to!</option>
+        <option value="Maybe">Maybe, let me think about it.</option>
+        <option value="No">Sorry, I can't make it.</option>
+      </select>
+
+      <button type="button" onclick="submitForm()">Send My Love</button>
+    </form>
+
+    <div id="confirmationMessage"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
